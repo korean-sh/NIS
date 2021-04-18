@@ -3,6 +3,7 @@
         <meta charset="UTF-8">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <title>노사발전재단 중장년통합통계시스템</title>
         <style>
             body{
                 padding:0px;
@@ -227,6 +228,10 @@
             $("#title").click(function(){
               $("#result").hide();
               $("#right").show();
+            });
+
+            $(".ready").click(function(){
+              alert("서비스 준비중입니다.");
             });
 
         });
@@ -982,7 +987,7 @@
                         <!--지도 통계로 이동-->
                         <div class="content" id="money"><a href="money.html"><img src="img/iconmonstr-banknote-thin-240.gif" style="width: 140px; height: 140px;"/></a><label>보수</label></div>
                         <div class="content" id="gender"><a href="gender.html"><img src="img/iconmonstr-user-29-240.gif" style="width: 140px; height: 140px;"/></a><label>성별</label></div>
-                        <div class="content" id="service"><a href="#"><img src="img/iconmonstr-school-30-240.gif" style="width: 140px; height: 140px;"/></a><label>서비스</label></div>
+                        <div class="content ready" id="service"><a href="#"><img src="img/iconmonstr-school-30-240.gif" style="width: 140px; height: 140px;"/></a><label>서비스</label></div>
                     </div>
                 </div>
             </div>
