@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>보수지표</title>
+        <title>서비스 현황</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
         <style>
@@ -19,50 +19,28 @@
                 background-color: rgb(30, 43, 79);
                 padding-top:10px; 
                 padding-bottom: 10px;
-                margin-bottom: 20px;
                 color:white;
                 font-size: 70;
                 text-align: center;
                 }
 
             #wrapper{display: flex;}
-            table{margin: auto; height: 80%;}
+            #dashboard{text-align: center; background-color: #EBE8DF;}
 
-            img{width: 500px;}
             #footer{
-                padding-top:10px;
-                height: 12%;
+                height: 10%;
                 background-color: rgb(71,71,71);
                 color:rgb(224,214,184);
                 width: 100%;
             }
         </style>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/moneyValue.js"></script>
-        
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-        <script>
-            $(document).ready(function (){
-                drawChart();
-            });
-       </script>
     </head>
     <body>
         <div id="logo"><a href="index.html"><img src="img/logo_type_03.png" style="width: 200px;"></a></div>
-        <div id="title">급여</div>
-        <table style="text-align:center;">
-            <tr>
-                <td><img src="img/charts/moneyMap.png"/></td>
-                <td><canvas id="myChart2" width="400px" height="400px"></canvas></td>
-                <td><canvas id="myChart3" width="400px" height="400px"></canvas></td>
-            </tr>
-            <tr>
-                <td>전국 보수 지도</td>
-                <td>지역별 보수 그래프</td>
-                <td>연령별 보수 그래프</td>
-            </tr>
-        </table>
+        <div id="title">대시보드</div>
+        <div id="dashboard">
+            <img src="img/dashboard/Total.png" style="width: 95%;"/>
+        </div>
         <div id="footer">
             <div>
                 <span style="font-size: 30;">이용지침</span>

@@ -32,7 +32,7 @@
       color: white;
       font-size: 20px;
       text-align: center;
-      padding-top: 9px;
+      padding-top: 50px;
     }
 
 
@@ -159,8 +159,7 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/regionValue.js"></script>
   <!--chart.js-->
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 
   <script>
@@ -175,72 +174,9 @@
           $("#result").show();
           $("#right").hide();
 
-          //지역 분기
-          if (classNumber == 11) {
-            setSeoul();
-          } else if (classNumber == 21) {
-            $("#name").text("부산");
-            $(".summary1").text("어업");
-            $(".summary2").text("1,250,000");
-          } else if (classNumber == 22) {
-            $("#name").text("대구");
-            $(".summary1").text("금속 광업");
-            $(".summary2").text("1,700,000");
-          } else if (classNumber == 23) {
-            $("#name").text("인천");
-            $(".summary1").text("식료품 제조업");
-            $(".summary2").text("2,100,000");
-          } else if (classNumber == 24) {
-            $("#name").text("광주");
-            $(".summary1").text("수도업");
-            $(".summary2").text("3,100,000");
-          } else if (classNumber == 25) {
-            $("#name").text("대전");
-            $(".summary1").text("종합 건설업");
-            $(".summary2").text("900,000");
-          } else if (classNumber == 26) {
-            $("#name").text("울산");
-            $(".summary1").text("자동차 및 부품 판매업");
-            $(".summary2").text("1,150,000");
-          } else if (classNumber == 29) {
-            $("#name").text("세종");
-            $(".summary1").text("항공 운송업");
-            $(".summary2").text("1,200,000");
-          } else if (classNumber == 31) {
-            $("#name").text("경기");
-            $(".summary1").text("정보통신업");
-            $(".summary2").text("2,500,000");
-          } else if (classNumber == 32) {
-            setGangwon();
-          } else if (classNumber == 33) {
-            $("#name").text("충북");
-            $(".summary1").text("부동산업");
-            $(".summary2").text("1,590,000");
-          } else if (classNumber == 34) {
-            $("#name").text("충남");
-            $(".summary1").text("보건업");
-            $(".summary2").text("1,600,000");
-          } else if (classNumber == 35) {
-            $("#name").text("전북");
-            $(".summary1").text("교육 서비스업");
-            $(".summary2").text("4,100,000");
-          } else if (classNumber == 36) {
-            $("#name").text("전남");
-            $(".summary1").text("금융업");
-            $(".summary2").text("2,050,000");
-          } else if (classNumber == 37) {
-            $("#name").text("경북");
-            $(".summary1").text("금융업");
-            $(".summary2").text("1,550,000");
-          } else if (classNumber == 38) {
-            $("#name").text("경남");
-            $(".summary1").text("소메업");
-            $(".summary2").text("1,450,000");
-          } else if (classNumber == 39) {
-            $("#name").text("제주");
-            $(".summary1").text("광업 지원 서비스업");
-            $(".summary2").text("1,000,000");
-          }
+          //지역별 호출
+          setValue(classNumber);
+
         }
       });
 
@@ -257,14 +193,15 @@
         $("#right").show();
       });
 
-      $(".ready").click(function () {
+      $("#gender").click(function () {
         alert("서비스 준비중입니다.");
       });
 
+      // $(".ready").click(function () {
+      //   alert("서비스 준비중입니다.");
+      // });
+
     });
-
-
-
   </script>
 </head>
 
@@ -850,31 +787,31 @@
       <div id="menuTotal">
         <div id="menu1">
           <div class="zipyo">
-            <p class="title">중장년고용률<br />(`21.03)</p>
+            <p class="title">중장년고용률<br />(`21.07)</p>
             <p class="num">65.2%</p>
           </div>
           <div class="zipyo">
-            <p class="title">중장년실업률<br />(`21.03)</p>
+            <p class="title">중장년실업률<br />(`21.07)</p>
             <p class="num">3.8%</p>
           </div>
           <div class="zipyo">
-            <p class="title">중장년취업자수<br />(`21.03)</p>
+            <p class="title">중장년취업자<br />(`21.07)</p>
             <p class="num">530만명</p>
           </div>
           <div class="zipyo">
-            <p class="title">중장년실업자수<br />(`21.03)</p>
+            <p class="title">중장년실업자<br />(`21.07)</p>
             <p class="num">21.1만명</p>
           </div>
         </div>
 
         <div id="menu2">
-          <!--지도 통계로 이동-->
+          <!--통계로 이동-->
           <div class="content" id="money"><a href="money.html"><img src="img/iconmonstr-banknote-thin-240.gif"
                 style="width: 140px; height: 140px;" /></a><label>평균임금</label></div>
-          <div class="content" id="gender"><a href="gender.html"><img src="img/iconmonstr-user-29-240.gif"
+          <div class="content" id="gender"><a href="#"><img src="img/iconmonstr-user-29-240.gif"
                 style="width: 140px; height: 140px;" /></a><label>성별</label></div>
-          <div class="content ready" id="service"><a href="#"><img src="img/iconmonstr-school-30-240.gif"
-                style="width: 140px; height: 140px;" /></a><label>서비스</label></div>
+          <div class="content ready" id="service"><a href="dashboard.html"><img src="img/iconmonstr-school-30-240.gif"
+                style="width: 140px; height: 140px;" /></a><label>중장년 대시보드</label></div>
         </div>
       </div>
     </div>
@@ -887,10 +824,8 @@
       <div class="summary" style="margin-bottom: 15px;"><span>💰 평균 임금 : </span><span class="summary2">0</span></div>
       <table>
         <tr>
-          <td><canvas id="myChart" width="300" height="300"></canvas></td>
-          <td><canvas id="myChart1" width="300" height="300"></canvas></td>
-          <!-- <td><img src="img/charts/money1.png" /></td> -->
-          <!-- <td><img src="img/charts/money2.png" /></td> -->
+          <td><canvas id="myChart1" width="250px" height="250px"></canvas></td>
+          <td><canvas id="myChart" width="250px" height="250px"></canvas></td>
         </tr>
         <tr>
           <td>💰 성별 평균 임금</td>
@@ -903,8 +838,8 @@
         </tr>
 
         <tr>
-          <td><img src="img/charts/gender1.png" /></td>
-          <td><img src="img/charts/gender2.png" /></td>
+          <td><canvas id="pieChartCanvas" width="200px" height="200px"></canvas></td>
+          <td><canvas id="pieChartCanvas2" width="200px" height="200px"></canvas></td>
         </tr>
         <tr>
           <td>🙎‍♂️🙎‍♀️ 성별 취업률</td>
